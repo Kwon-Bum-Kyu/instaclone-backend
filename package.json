@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "dev": ""
+    "dev": "nodemon --exec babel-node server"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,14 @@
   "homepage": "https://github.com/Kwon-Bum-Kyu/instaclone-backend#readme",
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server": "^3.13.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.7",
+    "@babel/node": "^7.22.19",
+    "@babel/preset-env": "^7.23.7",
+    "nodemon": "^3.0.2"
+  }
 }

@@ -2,6 +2,7 @@ import { ApolloServer, gql } from "apollo-server";
 
 const typeDefs = gql`
   type Movie {
+    id: Int
     title: String
     year: Int
   }
@@ -21,12 +22,12 @@ const resolvers = {
     movie: () => ({ title: "Hello", year: 2021 }),
   },
   Mutation: {
-    createMovie: (_, { title }) => {
-      console.log(title);
+    createMovie: (_: any, args: { title: string }) => {
+      console.log(args.title);
       return true;
     },
-    deleteMovie: (_, { title }) => {
-      console.log(title);
+    deleteMovie: (_: any, args: { title: string }) => {
+      console.log(args.title);
       return true;
     },
   },
